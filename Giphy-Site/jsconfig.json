@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@helpers/*": ["helpers/*"],
+      "@constants/*": ["constants/*"],
+      "@pages/*": ["pages/*"],
+      "@api/*": ["api/*"],
+      "@hocs/*": ["hocs/*"],
+      "@hooks/*": ["hooks/*"],
+      "@lib/*": ["lib/*"],
+      "@service/*": ["service/*"],
+      "@routes/*": ["routes/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
