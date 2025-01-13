@@ -1,0 +1,21 @@
+.categoryBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.categoryButton {
+  composes: smallTitle from "@src/index.css";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  background-color: grey;
+  border-radius: 25px;
+}
+
+.categoryImage {
+  width: 30px;
+}

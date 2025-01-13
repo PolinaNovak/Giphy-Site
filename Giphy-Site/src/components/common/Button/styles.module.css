@@ -1,0 +1,12 @@
+.button {
+  composes: smallTitle from "@src/index.css";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  padding: 14px 31px;
+  background-color: #212121;
+}

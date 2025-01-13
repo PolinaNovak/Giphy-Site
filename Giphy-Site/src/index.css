@@ -1,4 +1,18 @@
-/* Reset and base styles  */
+@font-face {
+  font-family: "Nekst-Medium";
+  src: url("../public/fonts/Nekst-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nekst-Light";
+  src: url("../public/fonts/Nekst-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nekst-Regular";
+  src: url("../public/fonts/Nekst-Regular.woff2") format("woff2");
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -107,4 +121,23 @@ label {
 
 legend {
   display: block;
+}
+
+:root {
+  --regular-font-family: "Nekst-Regular", sans-serif;
+  --medium-font-family: "Nekst-Medium", sans-serif;
+  --light-font-family: "Nekst-Light", sans-serif;
+}
+
+.smallTitle {
+  font-family: var(--medium-font-family);
+  font-size: 16px;
+  color: white;
+}
+
+.bigTitle {
+  font-family: var(--regular-font-family);
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
 }

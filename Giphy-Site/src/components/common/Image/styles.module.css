@@ -1,5 +1,24 @@
-/* .imageBody {
-  height: 100px;
-  width: 100px;
-  background-color: green;
-} */
+.imageBody:hover .title {
+  opacity: 1;
+}
+
+.imageBody {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.title {
+  composes: smallTitle from "@src/index.css";
+  opacity: 0;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}

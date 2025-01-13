@@ -6,14 +6,18 @@ export default function ItemsList({ items }) {
     <div className={styles.itemsListBody}>
       {items?.map((elem, index) => {
         return (
-          <Image
-            className={styles.image}
+          <div
             key={index}
-            height={elem[1].images.fixed_height.height}
-            width={elem[1].images.fixed_height.width}
-            src={elem[1].images.fixed_height.url}
-            username={elem[1].username}
-          />
+            className={styles.imageWrapper}
+            style={{ height: `${elem[1].images.fixed_height.height}px` }}
+          >
+            <Image
+              height={elem[1].images.fixed_height.height}
+              width={elem[1].images.fixed_height.width}
+              src={elem[1].images.fixed_height.url}
+              username={elem[1].username}
+            />
+          </div>
         );
       })}
     </div>

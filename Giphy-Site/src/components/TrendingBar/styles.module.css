@@ -1,0 +1,33 @@
+.trendingBarBody {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  composes: bigTitle from "@src/index.css";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 100%;
+}
+
+.titleImage {
+  width: 30px;
+}
+
+.trendingBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  border-radius: 50px;
+  background-color: #212121;
+}
+
+.button2 {
+  background-color: red;
+}
