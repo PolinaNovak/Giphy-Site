@@ -4,7 +4,7 @@ import NavBar from "@components/NavBar/NavBar";
 import Authorization from "@components/common/Authorization/Authorization";
 import Logo from "@components/common/Logo/Logo";
 
-export default function Header() {
+const Header = () => {
   return (
     <header className={styles.headerBody}>
       <Logo />
@@ -19,4 +19,6 @@ export default function Header() {
       <Authorization />
     </header>
   );
-}
+};
+
+export default Header;

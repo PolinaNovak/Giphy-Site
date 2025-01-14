@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 import { useState } from "react";
 import Button from "../Button/Button";
 
-export default function Search() {
+const Search = () => {
   const [searchValue, setSearchValue] = useState("");
 
   return (
@@ -24,4 +24,6 @@ export default function Search() {
       </Button>
     </div>
   );
-}
+};
+
+export default Search;

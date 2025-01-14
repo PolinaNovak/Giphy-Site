@@ -20,7 +20,7 @@ const CategoryList = ({ items }) => {
               <div
                 onMouseOver={() => setIsHovered(index)}
                 onMouseOut={() => setIsHovered(null)}
-                key={index}
+                key={elem.name_encoded}
                 className={`${styles.categoryWrapper}
               ${isHovered === index ? styles.current : ""}
               ${allHovered ? styles.darkened : ""}`}

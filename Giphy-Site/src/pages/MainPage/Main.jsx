@@ -20,7 +20,10 @@ export default function Main() {
         <Header />
         <Search />
         {categories ? <CategoryList items={categories} /> : null}
-        <TrendingBar setTrendingItem={setTrendingItem} />
+        <TrendingBar
+          trendingItem={trendingItem}
+          setTrendingItem={setTrendingItem}
+        />
         <ItemsList trendingItem={trendingItem} />
       </div>
     </>

@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import Button from "../Button/Button";
 
-export default function Category({ name }) {
+const Category = ({ name }) => {
   return (
     <div className={styles.categoryBody}>
       <Button>
@@ -17,4 +17,6 @@ export default function Category({ name }) {
       </Button>
     </div>
   );
-}
+};
+
+export default Category;

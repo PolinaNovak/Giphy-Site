@@ -1,16 +1,8 @@
 import styles from "./styles.module.css";
 import Button from "@components/common/Button/Button";
-import { useState } from "react";
+import { BAR_ITEMS } from "@constants/constants";
 
-export default function TrendingBar({ setTrendingItem }) {
-  const [activeButton, setActiveButton] = useState(0);
-  const barItems = ["GIFs", "Stickers"];
-
-  const changeTrendingItem = (index) => {
-    setActiveButton(index);
-    setTrendingItem(barItems[index]);
-  };
-
+const TrendingBar = ({ trendingItem, setTrendingItem }) => {
   return (
     <div className={styles.trendingBarBody}>
       <h2 className={styles.title}>
@@ -26,12 +18,16 @@ export default function TrendingBar({ setTrendingItem }) {
       </h2>
 
       <div className={styles.trendingBar}>
-        {barItems.map((elem, index) => {
+        {BAR_ITEMS?.map((elem) => {
           return (
             <Button
-              key={index}
-              className={activeButton === index ? styles.currentButton : ""}
-              onClick={() => changeTrendingItem(index)}
+              key={elem}
+              className={
+                elem.localeCompare(trendingItem) === 0
+                  ? styles.currentButton
+                  : ""
+              }
+              onClick={() => setTrendingItem(elem)}
             >
               {elem}
             </Button>
@@ -40,4 +36,6 @@ export default function TrendingBar({ setTrendingItem }) {
       </div>
     </div>
   );
-}
+};
+
+export default TrendingBar;

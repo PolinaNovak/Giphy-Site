@@ -1,14 +1,14 @@
 import styles from "./styles.module.css";
 import Button from "@components/common/Button/Button";
+import { LINKS } from "@constants/constants";
 
-export default function NavBar() {
-  const links = ["Reactions", "Entertainment", "Sports", "Stickers", "Artists"];
+const NavBar = () => {
   return (
     <div className={styles.navBarBody}>
       <ul className={styles.buttonsList}>
-        {links.map((elem, index) => {
+        {LINKS.map((elem) => {
           return (
-            <li key={index} className={styles.listItem}>
+            <li key={elem} className={styles.listItem}>
               <Button className={styles.navBarButton}>{elem}</Button>
             </li>
           );
@@ -29,4 +29,6 @@ export default function NavBar() {
       </ul>
     </div>
   );
-}
+};
+
+export default NavBar;

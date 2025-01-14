@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import Button from "@components/common/Button/Button";
 
-export default function Authorization() {
+const Authorization = () => {
   return (
     <div className={styles.authorizeBody}>
       <img
@@ -15,4 +15,6 @@ export default function Authorization() {
       <Button className={styles.authorizeButton}>Log In</Button>
     </div>
   );
-}
+};
+
+export default Authorization;

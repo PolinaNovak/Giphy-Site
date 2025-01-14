@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-export default function Logo() {
+const Logo = () => {
   return (
     <div className={styles.logoBody}>
       <img
@@ -19,4 +19,6 @@ export default function Logo() {
       />
     </div>
   );
-}
+};
+
+export default Logo;

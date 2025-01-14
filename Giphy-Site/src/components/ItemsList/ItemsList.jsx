@@ -4,15 +4,15 @@ import { getItems } from "@api/apiFetch";
 import switchGetItem from "@service/switchGetItem";
 import useFetch from "@hooks/useFetch";
 
-export default function ItemsList({ trendingItem }) {
+const ItemsList = ({ trendingItem }) => {
   const itemOptions = switchGetItem(trendingItem.toLowerCase());
   const data = useFetch(getItems, itemOptions);
 
   return (
     <div className={styles.itemsListBody}>
-      {data?.map((elem, index) => {
+      {data?.map((elem) => {
         return (
-          <div key={index} className={styles.imageWrapper}>
+          <div key={elem.id} className={styles.imageWrapper}>
             <Item
               height={elem.images.fixed_height.height}
               width={elem.images.fixed_height.width}
@@ -25,4 +25,6 @@ export default function ItemsList({ trendingItem }) {
       })}
     </div>
   );
-}
+};
+
+export default ItemsList;
