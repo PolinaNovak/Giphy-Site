@@ -1,0 +1,22 @@
+.authorizeBody {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: gray;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.authorizeImg {
+  height: 80%;
+  aspect-ratio: 1;
+}
+
+.authorizeButton {
+  height: 100%;
+
+  white-space: nowrap;
+  border-radius: 0;
+  background-color: rgb(65, 65, 65);
+}

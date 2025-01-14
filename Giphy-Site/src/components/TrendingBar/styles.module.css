@@ -28,6 +28,6 @@
   background-color: #212121;
 }
 
-.button2 {
-  background-color: red;
+.currentButton {
+  background: linear-gradient(to right, #93f, #6157ff);
 }

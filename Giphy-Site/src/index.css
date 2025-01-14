@@ -129,6 +129,12 @@ legend {
   --light-font-family: "Nekst-Light", sans-serif;
 }
 
+.mediumText {
+  font-family: var(--medium-font-family);
+  font-size: 19px;
+  color: gray;
+}
+
 .smallTitle {
   font-family: var(--medium-font-family);
   font-size: 16px;
@@ -140,4 +146,13 @@ legend {
   font-size: 20px;
   font-weight: bold;
   color: white;
+}
+
+input {
+  border: 2px solid black;
+}
+
+button {
+  width: 50px;
+  height: 50px;
 }

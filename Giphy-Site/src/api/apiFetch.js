@@ -1,8 +1,10 @@
 import { urlCreation } from "@service/URLCreation";
 
-export const getGifs = async () => {
+export const getItems = async (params) => {
+  // const url = urlCreation(params.trendingItemName, params.trendingItemQuery);
   const url = urlCreation("gifs", "trending");
 
+  console.log(url);
   try {
     const response = await fetch(url);
 
