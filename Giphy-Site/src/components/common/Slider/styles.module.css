@@ -18,3 +18,7 @@
   justify-content: space-between;
   position: relative;
 }
+
+.hidden {
+  display: none;
+}

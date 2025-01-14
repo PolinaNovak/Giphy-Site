@@ -1,11 +1,11 @@
 import styles from "./styles.module.css";
 
-export default function Arrow({ direction = "left", clickFunction }) {
+const Arrow = ({ direction = "left", clickFunction, className = "" }) => {
   return (
     <div
-      className={
+      className={`${
         direction === "left" ? styles.arrowBodyLeft : styles.arrowBodyRight
-      }
+      } ${className}`}
       onClick={clickFunction}
     >
       <img
@@ -13,10 +13,12 @@ export default function Arrow({ direction = "left", clickFunction }) {
         src="./icons/rightArrow.svg"
         height="800"
         width="800"
-        alt="Left"
+        alt={direction === "left" ? "Scroll left" : "Scroll right"}
         loading="lazy"
       />
       <div className={styles.gradient}></div>
     </div>
   );
-}
+};
+
+export default Arrow;

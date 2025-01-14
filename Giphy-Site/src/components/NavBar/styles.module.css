@@ -1,28 +1,61 @@
-.categoryListBody {
-  width: 100%;
-  height: 70px;
+.navBarBody {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 60%;
+}
+
+.buttonsList {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: auto;
+  background: linear-gradient(
+      to right,
+      rgb(0, 204, 255),
+      rgb(153, 51, 255) 31%,
+      rgb(230, 70, 182) 52%,
+      rgb(255, 249, 170) 77%,
+      rgb(0, 255, 153),
+      rgb(0, 204, 255)
+    )
+    0% 50% / 200% 50%;
+}
+
+.navBarButton {
+  height: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0;
+  padding-inline: 15px;
+  background: inherit;
+  position: relative;
+  z-index: 1;
+}
+
+.navBarButton img {
+  height: 12px;
+}
+
+.listItem {
+  height: 100%;
+  border-right: 5px solid black;
+  width: auto;
   position: relative;
 }
 
-.categoryWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 1;
-}
-
-.categoryWrapper:hover {
-  opacity: 0.5;
-}
-
-.categoriesList {
+.listItem::before {
+  content: "";
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  height: 90%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition-duration: 0.35s;
+}
+
+.listItem:hover::before {
+  opacity: 0;
 }

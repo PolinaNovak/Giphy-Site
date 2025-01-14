@@ -1,21 +1,24 @@
 import styles from "./styles.module.css";
-import Image from "@components/common/Image/Image";
+import Item from "@components/common/Item/Item";
+import { getItems } from "@api/apiFetch";
+import switchGetItem from "@service/switchGetItem";
+import useFetch from "@hooks/useFetch";
 
-export default function ItemsList({ items }) {
+export default function ItemsList({ trendingItem }) {
+  const itemOptions = switchGetItem(trendingItem.toLowerCase());
+  const data = useFetch(getItems, itemOptions);
+
   return (
     <div className={styles.itemsListBody}>
-      {items?.map((elem, index) => {
+      {data?.map((elem, index) => {
         return (
-          <div
-            key={index}
-            className={styles.imageWrapper}
-            style={{ height: `${elem[1].images.fixed_height.height}px` }}
-          >
-            <Image
-              height={elem[1].images.fixed_height.height}
-              width={elem[1].images.fixed_height.width}
-              src={elem[1].images.fixed_height.url}
-              username={elem[1].username}
+          <div key={index} className={styles.imageWrapper}>
+            <Item
+              height={elem.images.fixed_height.height}
+              width={elem.images.fixed_height.width}
+              src={elem.images.fixed_height.url}
+              alt={trendingItem.toLowerCase()}
+              username={elem.username}
             />
           </div>
         );

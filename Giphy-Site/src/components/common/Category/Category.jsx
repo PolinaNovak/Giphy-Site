@@ -7,7 +7,7 @@ export default function Category({ name }) {
       <Button>
         <img
           className={styles.categoryImage}
-          widh="512"
+          width="512"
           height="512"
           src="./icons/stonksArrow.png"
           alt="Trending"

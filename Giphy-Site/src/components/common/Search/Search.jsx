@@ -1,18 +1,16 @@
 import styles from "./styles.module.css";
 import { useState } from "react";
 import Button from "../Button/Button";
-import Image from "../Image/Image";
 
 export default function Search() {
-  const [searchValue, setSearchValue] = useState(
-    "Search all the GIF and Stickers"
-  );
+  const [searchValue, setSearchValue] = useState("");
 
   return (
     <div className={styles.searchBody}>
       <input
         className={styles.searchInput}
         value={searchValue}
+        placeholder="Search all the GIF and Stickers"
         onChange={(event) => setSearchValue(event.target.value)}
       />
       <Button className={styles.searchButton}>

@@ -16,7 +16,7 @@ const useFetch = (fetchFunction, params) => {
     fetchData();
   }, [fetchFunction, params]);
 
-  return Object.entries(data);
+  return Object.values(data);
 };
 
 export default useFetch;

@@ -10,7 +10,7 @@
 
 .authorizeImg {
   height: 80%;
-  aspect-ratio: 1;
+  width: 70px;
 }
 
 .authorizeButton {

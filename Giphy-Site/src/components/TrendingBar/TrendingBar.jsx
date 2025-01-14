@@ -2,9 +2,9 @@ import styles from "./styles.module.css";
 import Button from "@components/common/Button/Button";
 import { useState } from "react";
 
-export default function TrendingBar({ tredingItem, setTrendingItem }) {
+export default function TrendingBar({ setTrendingItem }) {
   const [activeButton, setActiveButton] = useState(0);
-  const barItems = ["GIFs", "Stickers", "Clips"];
+  const barItems = ["GIFs", "Stickers"];
 
   const changeTrendingItem = (index) => {
     setActiveButton(index);
@@ -16,7 +16,7 @@ export default function TrendingBar({ tredingItem, setTrendingItem }) {
       <h2 className={styles.title}>
         <img
           className={styles.titleImage}
-          widh="512"
+          width="512"
           height="512"
           src="./icons/stonksArrow.png"
           alt="Trending"

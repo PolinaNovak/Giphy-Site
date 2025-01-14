@@ -2,18 +2,12 @@ import styles from "./styles.module.css";
 import Button from "@components/common/Button/Button";
 import NavBar from "@components/NavBar/NavBar";
 import Authorization from "@components/common/Authorization/Authorization";
+import Logo from "@components/common/Logo/Logo";
 
-export default function Header({ items }) {
+export default function Header() {
   return (
     <header className={styles.headerBody}>
-      <img
-        className={styles.logo}
-        src="/icons/logo.svg"
-        width="100"
-        height="60"
-        alt="Giphy"
-        loading="lazy"
-      />
+      <Logo />
 
       <NavBar />
 

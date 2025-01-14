@@ -19,3 +19,7 @@
 .categoryImage {
   width: 30px;
 }
+
+.buttonCategory {
+  white-space: nowrap;
+}

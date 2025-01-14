@@ -1,12 +1,12 @@
 import styles from "./styles.module.css";
 
-export default function Image({ src, username, width, height }) {
+const Item = ({ src, username, width, height, alt }) => {
   return (
     <div className={styles.imageBody}>
       <img
         className={styles.image}
         src={src}
-        alt="GIF"
+        alt={alt}
         loading="lazy"
         width={width}
         height={height}
@@ -14,4 +14,6 @@ export default function Image({ src, username, width, height }) {
       <span className={`${styles.title}`}>{username}</span>
     </div>
   );
-}
+};
+
+export default Item;

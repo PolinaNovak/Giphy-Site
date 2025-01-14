@@ -1,8 +1,8 @@
 import { urlCreation } from "@service/URLCreation";
 
 export const getItems = async (params) => {
-  // const url = urlCreation(params.trendingItemName, params.trendingItemQuery);
-  const url = urlCreation("gifs", "trending");
+  console.log(params);
+  const url = urlCreation(params);
 
   console.log(url);
   try {
@@ -17,7 +17,7 @@ export const getItems = async (params) => {
 };
 
 export const getCategories = async () => {
-  const url = urlCreation("gifs", "categories");
+  const url = urlCreation("gifs/categories");
 
   try {
     const response = await fetch(url);
